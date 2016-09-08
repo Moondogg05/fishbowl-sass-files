@@ -1,0 +1,100 @@
+//        Table of Contents        //
+
+
+//  |  ~Footer Panel Styles        |
+//  |  ~Footer Media Queries       |
+
+
+//  |  ~Footer Panel Styles        |
+
+footer
+  h3
+    margin-top: 20px
+  ul
+    padding-left: 0
+    li
+      @include ProximaNovaBold
+      list-style: none
+  .copyright
+    p
+      @include ProximaNovaBold
+      margin: 0 0 30px
+      text-align: center
+      span
+        font-size: 1.5em
+        vertical-align: middle
+        font-style: normal
+        @include ProximaNova
+
+footer
+  .social-media
+    clear: both
+    margin: 0
+    overflow: hidden
+    .social-icon
+      float: left
+      width: 30%
+      img
+        width: 44px
+    .social-icon-last
+      float: left
+      width: 50%
+  .social-media:first-of-type
+    margin: 20px 0 0
+  .footer-unique
+    min-height: 150px
+    text-align: center
+    p
+      @include ProximaNovaBold
+
+      font-size: 18px
+      margin-top: 1em
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 1px
+
+.new-footer
+  text-align: center
+
+.this-button
+  text-align: center
+
+.prefooter
+  padding: 30px 10px
+
+
+//  |  ~Footer Media Queries       |
+
+@media screen and (min-width: 550px)
+  footer
+    .social-media
+      .social-icon
+        width: 25%
+
+@media screen and (min-width: 600px)
+  footer
+    .social-media
+      .social-icon
+        width: 30%
+
+@media screen and (min-width: 800px)
+  footer
+    .social-media
+      .social-icon
+        width: 50%
+        margin: 3px 0
+        img
+          width: 55px
+
+
+
+
+
+
+//  |  ~Footer Panel Styles     |
+
+footer
+  ul
+    li
+      a, a:link, a:visited
+        color: $white

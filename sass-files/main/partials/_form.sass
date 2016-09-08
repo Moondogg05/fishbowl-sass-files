@@ -1,0 +1,212 @@
+//  |  ~Form                    |
+
+.formz
+  padding: 0 14px 10px
+
+.form
+  overflow: hidden
+  // min-width: 320px
+  // max-width: 400px
+
+#form input[type="text"],
+#form input[type="tel"],
+#form input[type="email"],
+#form input[type="checkbox"],
+select,
+#form textarea
+  @include ProximaNova
+  font-size: 15px
+
+#form
+  // @include border-radius(10px)
+  background: $gray
+
+#form h6
+  // @include border-top-radius(10px)
+  background-color: $dark
+  color: $white
+  display: block
+  letter-spacing: 1px
+  padding: 12px 0 8px 0
+  text-align: center
+  text-transform: uppercase
+  
+#form label span
+  @include ProximaNovaItalic
+  color: $dark
+  cursor: text
+  display: block
+  font-size: 13px
+  margin: 5px 10px
+  padding: 0px
+
+#form input[type="text"],
+#form input[type="email"],
+#form input[type="tel"],
+#form textarea
+  @include border-radius(6px)
+  background: $white
+  border: 1px solid $gray
+  color: $dark
+  font-size: 16px
+  margin: 7px 0
+  outline: 0
+  padding: 13px 5px
+
+#form input[type="checkbox"]
+  @include border-radius(6px)
+  border: 1px solid $gray
+  color: $dark
+  font-size: 16px
+  outline: 0
+
+#form span
+  margin-right: 20px
+#form span:last-of-type
+  margin-right: 0px
+
+#form p
+  margin: 0
+#form .select-p
+  margin-top: 7px
+
+.styled-select select
+  background: transparent
+  width: 100%
+  padding: 5px 5px
+  font-size: 16px
+  line-height: 1
+  border: 0
+  height: 34px
+  color: $dark
+  -webkit-appearance: none
+  -moz-appearance: none
+  text-indent: 0.01px
+  text-overflow: ''
+  outline: 0
+
+.styled-select
+  @include border-radius(6px)
+  width: 100%
+  height: 34px
+  overflow: hidden
+  color: $dark
+  background: url(/sites/all/themes/fishbowl/assets/images/select-arrow.jpg) no-repeat right $white
+  border: 1px solid #ccc
+  margin: 0 0 0.7em
+
+.location-select select
+  background: transparent
+  width: 100%
+  padding: 5px 7px
+  font-size: 16px
+  line-height: 1
+  border: 0
+  height: 34px
+  color: $dark
+  -webkit-appearance: none
+  -moz-appearance: none
+  text-indent: 0.01px
+  text-overflow: ''
+  outline: 0
+
+.location-select
+  @include border-radius(6px)
+  height: 34px
+  overflow: hidden
+  color: $dark
+  background: url(/sites/all/themes/fishbowl/assets/images/select-arrow.jpg) no-repeat right $white
+  border: 1px solid #ccc
+  margin: 0.5em 0 0.7em
+
+#form textarea
+  min-height: 140px
+  resize: none
+
+#form input[name="name"]
+  margin-top: 0
+
+#form input[type="text"],
+#form input[type="email"],
+#form input[type="tel"],
+#form textarea
+  width: 100%
+
+#form input[name="phone_work"],
+#form input[name="Phone"],
+#form input[name="phone"]
+  width: 70%
+
+#form input[name="phoneext"],
+#form input[name="ext"]
+  float: right
+  width: 25%
+
+#form .form-state
+  float: left
+  width: 29%
+
+#form .form-country
+  float: right
+  width: 66%
+
+#form input[type="text"]:hover,
+#form input[type="tel"]:hover,
+#form input[type="email"]:hover,
+#form input[type="checkbox"]:hover,
+.styled-select:hover,
+.location-select:hover,
+#form textarea:hover
+  @include box-shadow(0 0 3px $blue)
+  // @include transition(border-color 1s ease-in-out)
+  @include transition(box-shadow 0.3s ease-in-out)
+  border-color: $gray
+
+select:hover
+  cursor: pointer
+
+#form input:focus,
+#form textarea:focus,
+.styled-select:focus,
+.location-select:focus
+  @include box-shadow(0 0 3px $blue)
+  @include transition(border-color 1s ease-in-out)
+  //border: 1px solid #999
+  border-color: $gray
+  outline: 0
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder
+  color: $dark
+
+input:-moz-placeholder,
+textarea:-moz-placeholder
+  color: $dark
+
+input::-moz-placeholder,
+textarea::-moz-placeholder
+  color: $dark
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder
+  color: $dark
+
+.formz
+  .button
+    width: 100%
+    max-width: 600px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

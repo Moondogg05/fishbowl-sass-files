@@ -1,0 +1,596 @@
+//          Table of Contents          //
+
+//  |   ~Nav Styles         |
+//  |   ~Dropdown Styles    |
+//  |   ~Media Queries      |
+//  |   ~mmenu styles       |
+
+div.page-container
+  padding-top: 92px
+nav.top-nav
+  font-family: "Roboto", sans-serif !important
+  font-size: 16px
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  margin: 0
+  padding: 0
+  height: 92px
+  width: 100%
+  background: rgba(255,255,255,1)
+  border-bottom: 1px solid #eee
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+nav.shrink
+  border-bottom: 1px solid #fff
+  height: 67px
+  box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.12), 0px 2px 8px 0px rgba(0,0,0,0.085), 0px 3px 3px -4px rgba(0,0,0,0.4)
+.top-bar
+  display: block
+  width: 100%
+  height: 2px
+  margin: 0
+  padding: 0
+  line-height: 15px
+  color: #fff
+  text-transform: uppercase
+  text-align: center
+  background: #125089
+  font-size: 0.6em
+  font-weight: 700
+  letter-spacing: 2px
+.nav-wrapper
+  position: relative
+  z-index: 998
+  display: block
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0
+a.logo
+  display: block
+  float: left
+  width: 150px
+  height: auto
+  margin: 25px 0 0 0
+  padding: 0
+  cursor: pointer
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+a.logo > img
+  display: block
+  width: 87%
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+a.logo.logo-shrink
+  width: 120px
+  margin: 14px 0 0 0
+a.logo.logo-shrink > img
+  width: 100%
+ul.main-nav-alt
+  position: relative
+  z-index: 999
+  display: block
+  float: right
+  width: -webkit-calc(100% - 150px)
+  width: -moz-calc(100% - 150px)
+  width: -ms-calc(100% - 150px)
+  width: -o-calc(100% - 150px)
+  width: calc(100% - 150px)
+  height: 90px
+  line-height: 92px
+  list-style: none
+  margin: 0
+  padding: 0
+  background: transparent
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+ul.main-nav-alt > li
+  font-family: "Roboto", sans-serif !important
+  display: inline-block
+  width: 10.15%
+  height: 100%
+  font-size: 0.965em
+  font-weight: 400
+  text-align: center
+  margin: 0
+  padding: 0
+  overflow: hidden
+ul.main-nav-alt > li.trial
+  border-left: 1px solid #eee
+ul.main-nav-alt > li.trial > a
+  display: inline-block
+  width: 80%
+  margin: 0 auto
+  border: 1px solid #d10304
+  background: transparent
+  color: #d10304
+  height: 30px
+  line-height: 30px
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+ul.main-nav-alt > li.trial > a:hover
+  background: #d10304
+  color: #fff
+nav.shrink ul.main-nav-alt > li.trial > a
+  background: #d10304
+  color: #fff
+ul.main-nav-alt > li.login,
+ul.main-nav-alt > li.chat,
+ul.main-nav-alt > li.search
+  width: 5%
+ul.main-nav-alt > li.login,
+ul.main-nav-alt > li.chat
+  line-height: 69px
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+nav.shrink ul.main-nav-alt > li.login,
+nav.shrink ul.main-nav-alt > li.chat
+  line-height: 47px
+ul.main-nav-alt > li.login,
+ul.main-nav-alt > li.chat
+  text-align: right
+ul.main-nav-alt > li > a
+  display: block
+  width: 100%
+  height: 100%
+  color: #125089
+  text-decoration: none
+  transition: color 0.28s ease 0.15s
+  -webkit-transition: color 0.28s ease 0.15s
+  -moz-transition: color 0.28s ease 0.15s
+  -ms-transition: color 0.28s ease 0.15s
+  -o-transition: color 0.28s ease 0.15s
+ul.main-nav-alt > li:hover > a
+  color: #f4801a
+nav.shrink ul.main-nav-alt
+  width: -webkit-calc(98% - 120px)
+  width: -moz-calc(98% - 120px)
+  width: -ms-calc(98% - 120px)
+  width: -o-calc(98% - 120px)
+  width: calc(98% - 120px)
+  height: 65px
+  line-height: 67px
+  position: relative
+
+// Dropdown Menus
+ul.main-nav-alt > li > div
+  font-size: 16px
+  color: #fff
+  visibility: hidden
+  position: fixed
+  z-index: 997
+  line-height: normal
+  display: block
+  width: 100%
+  height: auto
+  top: 92px
+  left: 0
+  padding: 0
+  background: #343841
+  overflow: hidden
+  transition: all 0.28s ease 0.15s
+  -webkit-transition: all 0.28s ease 0.15s
+  -moz-transition: all 0.28s ease 0.15s
+  -ms-transition: all 0.28s ease 0.15s
+  -o-transition: all 0.28s ease 0.15s
+  opacity: 0
+ul.main-nav-alt > li > div.search-form
+  background: #343841
+nav.shrink ul.main-nav-alt > li > div
+  top: 67px
+
+// Open menu
+ul.main-nav-alt li:hover > div,
+nav.shrink ul.main-nav-alt li:hover > div
+  visibility: visible
+  padding: 30px 0
+  opacity: 1
+ul.main-nav-alt li:hover > div.search-form,
+nav.shrink ul.main-nav-alt li:hover > div.search-form
+  padding: 30px 0 20px
+  visibility: visible
+  opacity: 1
+.dd-wrapper
+  display: block
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0
+  text-align: left
+  ul.dd-col
+    display: inline-block
+    float: left
+    width: auto
+    margin: 0 30px
+    padding: 0
+    list-style: none
+    h3
+      font-size: 1.05em
+      margin: 25px 0 5px
+      padding: 0
+      padding-bottom: 7px
+      text-transform: uppercase
+      a
+        color: #fff
+        text-decoration: none
+      a:hover
+        color: #f4801a
+    h3:first-of-type
+      margin-top: 0
+    li
+      margin: 0
+      padding: 6px 0
+      a
+        color: rgba(255,255,255,0.5)
+        text-decoration: none
+      a:hover
+        color: #f4801a
+  ul.dd-col:last-of-type
+    margin-right: 0
+  ul.dd-col.integrations
+    li
+      a
+        img
+          display: inline-block
+          width: 105px
+          margin: 0 10px
+          padding: 0
+          border: 0
+          transition: outline 0.08s ease
+          -webkit-transition: outline 0.08s ease
+          -moz-transition: outline 0.08s ease
+          -ms-transition: outline 0.08s ease
+          -o-transition: outline 0.08s ease
+        img:hover
+          outline: #f4801a solid
+          outline-offset: 2px
+        img:first-of-type
+          margin-left: 0
+    h3
+      a
+        display: block
+        float: right
+        margin-right: 10px
+        font-weight: normal
+        font-size: 0.8em
+  ul.dd-col-search
+    display: block
+    width: 60%
+    max-width: 900px
+    margin: 0 auto
+    padding: 0
+    list-style: none
+    h3
+      font-size: 1.15em
+      margin: 10px 0
+      border-bottom: none
+      padding: 0
+      padding-bottom: 5px
+      text-transform: uppercase
+      display: inline-block
+      width: 30%
+      float: left
+    input[type="text"]
+      display: inline-block
+      float: left
+      width: 70%
+      appearance: none
+      -webkit-appearance: none
+      -moz-appearance: none
+      -ms-appearance: none
+      -o-appearance: none
+      border: none
+      border-radius: 6px
+      padding: 10px
+      background: #fff
+      outline: none
+      font-size: 1em
+
+// Nav arrow
+ul.main-nav-alt > span.nav-active
+  visibility: hidden
+  display: block
+  position: absolute
+  bottom: 0
+  left: 0
+  background: transparent
+  border-left: 12px solid transparent
+  border-right: 12px solid transparent
+  border-bottom: 14px solid #343841
+  border-top: none
+  width: 0
+  height: 0
+  font-size: 1px
+  margin: 0
+  transition: all 0.28s ease
+  -webkit-transition: all 0.28s ease
+  -moz-transition: all 0.28s ease
+  -ms-transition: all 0.28s ease
+  -o-transition: all 0.28s ease
+ul.main-nav-alt > li.nav-item:hover ~ span.nav-active
+  visibility: visible
+  z-index: 999
+ul.main-nav-alt > li.nav-item.login:hover ~ span.nav-active,
+ul.main-nav-alt > li.nav-item.chat:hover ~ span.nav-active,
+ul.main-nav-alt > li.nav-item.trial:hover ~ span.nav-active
+  visibility: hidden
+ul.main-nav-alt > li.nav-item-search:hover ~ span.nav-active
+  visibility: visible
+  z-index: 999
+  border-bottom: 14px solid #343841
+ul.main-nav-alt > span.tel
+  font-family: "Roboto", sans-serif
+  position: absolute
+  bottom: 16px
+  right: 60px
+  width: auto
+  height: 30px
+  line-height: 30px
+  font-size: 0.9em
+  font-weight: 700
+  font-style: normal !important
+  color: #125089
+  transition: all 0.4s ease
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+nav.shrink ul.main-nav-alt > span.tel
+  bottom: 5px
+  right: 61px
+.logo-white
+  display: block
+  width: 150px
+    
+// Mobile Nav
+div.mobile-nav,
+nav a.mobile-tel,
+nav a.ft-mobile,
+a.logo-sm
+  display: none
+a.mmenu
+  display: none
+  transition: all 0.28s ease
+  -webkit-transition: all 0.28s ease
+  -moz-transition: all 0.28s ease
+  -ms-transition: all 0.28s ease
+  -o-transition: all 0.28s ease
+p.mobile-copy
+  display: block
+  width: 90%
+  margin: 60px auto 0
+  font-size: 0.85em
+
+// mmenu css
+div.mm-menu.mm-theme-black
+  background: #125089
+  background: linear-gradient(135deg, #2271b6 10%, #125089 70%)
+.mm-menu > .mm-navbar,
+.mm-panels,
+.mm-panels > .mm-panel
+  background: none !important
+.mm-navbar-top-1
+  text-align: center
+  position: relative
+  border-bottom: none
+  a
+    border-radius: 40px
+    border: 1px solid rgba(255,255,255,0.6)
+    color: rgba(255,255,255,0.6) !important
+    font-size: 16px !important
+    line-height: 40px
+    width: 40px
+    height: 40px
+    padding: 0
+    margin: 0
+  a:hover
+    border-color: #fff
+    color: #fff !important
+  img
+    display: inline-block
+    border-radius: 60px
+    width: 180px
+    padding: 0px
+    margin: 0 auto
+.mm-navbar-top-1:before
+  content: ""
+  display: inline-block
+  vertical-align: middle
+  height: 100%
+  width: 1px
+.mm-navbar-top-1 > *
+  display: inline-block
+  vertical-align: middle
+.mm-listview
+  text-transform: uppercase
+  font-size: 0.9em
+  font-weight: 700
+  a
+    text-align: center
+    padding: 30px 0 !important
+    font: inherit
+    color: rgba(255,255,255,0.6)
+  a:hover
+    color: #fff !important
+    .fa
+      color: #fff !important
+  span
+    text-align: center
+    padding: 30px 0 !important
+    font: inherit
+    a:hover
+      color: #fff !important
+  .fa
+    color: rgba(255,255,255,0.6)
+    position: absolute
+    left: 20px
+  p
+    text-align: center
+    font-weight: 700
+    padding-top: 30px
+  input[class="search_box"]
+    display: block
+    width: 90%
+    margin: 20px auto
+    padding: 12px 10px
+    border: none
+    border-radius: 4px
+    appearance: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    outline: none
+  li:last-child:after
+    content: none
+    display: none
+
+
+// Media Queries
+@media screen and (max-width: 1200px)
+  .nav-wrapper
+    width: 100%
+    max-width: 100%
+  a.logo
+    width: 120px
+    margin-top: 28px
+    img
+      width: 100%
+  a.logo,
+  a.logo.logo-shrink
+    margin-left: 2%
+  li.nav-item.trial
+    display: none
+  ul.main-nav-alt > li.login,
+  ul.main-nav-alt > li.chat
+    line-height: 92px
+    text-align: center
+    width: 10%
+  nav.shrink ul.main-nav-alt > li.login,
+  nav.shrink ul.main-nav-alt > li.chat
+    line-height: 67px
+  ul.main-nav-alt > span.tel
+    bottom: 0
+    right: 2%
+  div.mobile-nav
+    display: none
+    
+@media screen and (max-width: 900px)
+  div.mobile-nav
+    display: block
+  ul.main-nav-alt
+    display: none
+  nav
+    a.mmenu
+      display: inline-block
+      width: auto
+      height: 20px
+      line-height: 20px
+      vertical-align: text-bottom
+      font-size: 0.8em
+      font-weight: 400
+      color: #125089
+      position: absolute
+      top: 35px
+      right: 17px
+      text-decoration: none
+      i.fa
+        margin-left: 6px
+        font-size: 22px
+        vertical-align: middle
+        margin-top: -2px
+    a.mobile-tel
+      display: inline-block
+      width: 50px
+      height: 45px
+      line-height: 45px
+      font-size: 3.3em
+      font-weight: 400
+      color: #125089
+      position: absolute
+      top: 19px
+      right: 144px
+      text-decoration: none
+      transition: top 0.28s ease
+      -webkit-transition: top 0.28s ease
+      -moz-transition: top 0.28s ease
+      -ms-transition: top 0.28s ease
+      -o-transition: top 0.28s ease
+    a.ft-mobile
+      display: inline-block
+      width: 45px
+      height: 45px
+      font-size: 0.7em
+      line-height: 1.15em
+      font-weight: 700
+      text-transform: uppercase
+      color: #fff
+      background: #125089
+      border: 1px solid #125089
+      border-radius: 8px
+      padding: 10px 0 0
+      text-align: center
+      position: absolute
+      top: 22px
+      right: 97px
+      text-decoration: none
+      transition: top 0.28s ease
+      -webkit-transition: top 0.28s ease
+      -moz-transition: top 0.28s ease
+      -ms-transition: top 0.28s ease
+      -o-transition: top 0.28s ease
+  a.logo
+    width: 110px
+    margin-top: 28px
+    img
+      width: 100%
+  nav.shrink
+    position: fixed
+    top: 0
+    left: 0
+    a.mmenu
+      top: 24px
+    a.logo-shrink
+      width: 110px
+      margin-top: 16px
+    a.mobile-tel
+      top: 7px
+    a.ft-mobile
+      top: 10px
+
+@media screen and (max-width: 400px)
+  a.logo
+    display: none
+  a.logo-sm
+    display: inline-block
+    width: 60px
+    margin: 18px 0 0 20px
+    transition: 0.4s ease
+    -webkit-transition: 0.4s ease
+    -moz-transition: 0.4s ease
+    -ms-transition: 0.4s ease
+    -o-transition: 0.4s ease
+  nav.shrink
+    a.logo-sm
+      width: 50px
+      margin: 10px 0 0 20px

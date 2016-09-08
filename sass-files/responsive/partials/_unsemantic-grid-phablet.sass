@@ -1,0 +1,96 @@
+@import "unsemantic-vars"
+
+// `Hide on phablet.
+//----------------------------------------------------------------------------------------------------
+
+.hide-on-p
+  @extend %hide
+
+// `Grid columns.
+//----------------------------------------------------------------------------------------------------
+
+//
+// Full width, just line-break.
+//
+
+.p-100
+  @extend %grid-100
+
+//
+// For 5 through 95 percent.
+//
+
+@for $i from 1 through 19
+  $num: $i * 5
+
+  // Percentage based widths.
+  .p-#{$num}
+    @extend %grid-#{$num}
+
+  // Prefix, to add extra columns before.
+  .phablet-prefix-#{$num}
+    @extend %prefix-#{$num}
+
+  // Suffix, to add extra columns after.
+  .phablet-suffix-#{$num}
+    @extend %suffix-#{$num}
+
+  // Push, to rearrange column order (for potential "SEO").
+  .phablet-push-#{$num}
+    @extend %push-#{$num}
+
+  // Pull, to rearrange column order (for potential "SEO").
+  .phablet-pull-#{$num}
+    @extend %pull-#{$num}
+
+//
+// For one-third and two-thirds.
+//
+
+@for $i from 1 through 2
+  $num: $i * 33
+
+  // Percentage based widths.
+  .p-#{$num}
+    @extend %grid-#{$num}
+
+  // Prefix, to add extra columns before.
+  .phablet-prefix-#{$num}
+    @extend %prefix-#{$num}
+
+  // Suffix, to add extra columns after.
+  .phablet-suffix-#{$num}
+    @extend %suffix-#{$num}
+
+  // Push, to rearrange column order (for potential "SEO").
+  .phablet-push-#{$num}
+    @extend %push-#{$num}
+
+  // Pull, to rearrange column order (for potential "SEO").
+  .phablet-pull-#{$num}
+    @extend %pull-#{$num}
+
+// `Push & Pull, to rearrange column order (for potential "SEO").
+//----------------------------------------------------------------------------------------------------
+
+//
+// For 5 through 95 percent.
+//
+
+@for $i from 1 through 19
+  $num: $i * 5
+
+  .phablet-push-#{$num},
+  .phablet-pull-#{$num}
+    @extend %grid-columns-push-pull
+
+//
+// For one-third and two-thirds.
+//
+
+@for $i from 1 through 2
+  $num: $i * 33
+
+  .phablet-push-#{$num},
+  .phablet-pull-#{$num}
+    @extend %grid-columns-push-pull

@@ -1,0 +1,379 @@
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus
+  outline: none
+
+.slides,
+.flex-direction-nav
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+// Icon Fonts
+// Font-face Icons 
+@font-face
+  font-family: 'flexslider-icon'
+  src: url('/fonts/flex/flexslider-icon.eot')
+  src: url('/fonts/flex/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/fonts/flex/flexslider-icon.woff') format('woff'), url('/fonts/flex/flexslider-icon.ttf') format('truetype'), url('/fonts/flex/flexslider-icon.svg#flexslider-icon') format('svg')
+  font-weight: normal
+  font-style: normal
+
+
+// FlexSlider Necessary Styles
+.flexslider
+  margin: 0
+  padding: 0
+  .slides>li
+    display: none
+    -webkit-backface-visibility: hidden
+    img  // Hide the slides before the JS is loaded. Avoids image jumping
+      width: 100%
+      display: block
+
+
+// Clearfix for the .slides element 
+.slides:after
+  content: "\0020"
+  display: block
+  clear: both
+  visibility: hidden
+  line-height: 0
+  height: 0
+
+html[xmlns]
+  .slides
+    display: block
+
+*
+  html
+    .slides
+      height: 1%
+
+
+// No JavaScript Fallback 
+// If you are not using another script, such as Modernizr, make sure you * include js that eliminates this class on page load 
+.no-js
+  .slides>li:first-child
+    display: block
+
+
+// FlexSlider Default Theme
+.slideshow
+  max-width: 1600px
+  width: 100%
+  margin: 0 auto
+  @include box-sizing(border-box)
+
+.flexslider
+  background: #fffffa
+  position: relative
+  zoom: 1
+  .slides
+    zoom: 1
+
+.flex-viewport
+  max-height: 2000px
+  -webkit-transition: all 1s ease
+  -moz-transition: all 1s ease
+  -o-transition: all 1s ease
+  transition: all 1s ease
+
+.loading
+  .flex-viewport
+    max-height: 300px
+
+
+.flexslider
+  .slides>li
+    overflow: hidden
+    img
+      width: 140%
+      max-width: 140%
+      margin-left: -40%
+
+
+// Direction Nav 750px and below
+.flex-direction-nav
+  *height: 0
+  a
+    display: block
+    width: 14px
+    height: 22px
+    z-index: 300
+    overflow: hidden
+    opacity: 0
+    cursor: pointer
+    color: rgba(255,255,255,0.8)
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.3)
+    -webkit-transition: all .3s ease
+    -moz-transition: all .3s ease
+    transition: all .3s ease
+
+.flexslider
+  .flex-prev
+    opacity: 0.7
+    float: left
+    margin-left: 5px
+  .flex-next
+    opacity: 0.7
+    float: right
+    margin-right: 5px
+
+
+.flexslider .flex-next:hover,
+.flexslider .flex-prev:hover
+  opacity: 1
+
+.flex-direction-nav
+  .flex-disabled
+    opacity: 0!important
+    filter: alpha(opacity=0)
+    cursor: default
+  a:before
+    font-family: "flexslider-icon"
+    font-size: 20px
+    display: inline-block
+    content: '\f001'
+  a.flex-next:before
+    content: '\f002'
+
+
+// Control Nav 750px and below, also affects Direction Nav
+.control-container
+  color: #fff
+  display: block
+  width: 100%
+  max-width: 750px
+  margin: 0 auto
+  position: absolute
+  bottom: 22%
+  z-index: 100
+
+.control-nav
+  width: 100%
+  max-width: 750px
+  margin: 0 auto
+  overflow: hidden
+  clear: both
+  position: relative
+
+
+// Flex Text
+.flex-caption
+  width: 100%
+  margin: 0
+  a, a:hover, a:focus
+    text-decoration: none
+
+.text-container
+  position: relative
+  width: 100%
+  padding: 10px 25px
+  min-height: 141px
+  p
+    line-height: 1.2em
+    margin: 10px 0
+  ul
+    font-size: 16px
+
+.caption-one
+  color: #fff
+  background-color:  #bc2f0e
+
+.caption-two
+  color: #fff
+  background-color:  #174cd6
+
+.caption-three
+  color: #fff
+  background-color:  #ee6413
+
+.caption-one a,
+.caption-two a,
+.caption-three a
+  color: #fff
+
+
+@media screen and (max-width:750px)
+  .flex-control-nav
+    display: none
+
+@media screen and (min-width: 350px)
+  .control-container
+    bottom: 18%
+
+@media screen and (min-width: 380px)
+  .control-container
+    bottom: 20%
+
+@media screen and (min-width: 412px)
+  .control-container
+    bottom: 15%
+  .text-container
+    min-height: 123px
+
+@media screen and (min-width: 551px)
+  .text-container
+    min-height: 147px
+
+@media screen and (min-width: 680px)
+  .control-container
+    bottom: 14%
+
+@media screen and (min-width: 700px)
+  .control-container
+    bottom: 13%
+
+@media screen and (min-width: 750px)
+  .flex-direction-nav
+    display: none
+  
+  .hp
+    h1
+      padding: 0 0 20px
+      line-height: 1em
+
+  .flexslider
+    .slides>li
+      overflow: hidden
+      img
+        width: 100%
+        max-width: 100%
+        margin-left: 0
+  
+  .flex-caption
+    width: 100%
+    max-width: 1600px
+    margin: 0 auto
+    position: absolute
+    top: 5%
+    z-index: 100
+
+  .caption-container
+    position: relative
+    width: 100%
+    max-width: 1160px
+    margin: 0 auto
+    padding-left: 20px
+  
+  .flexslider
+    .text-container
+      width: 325px
+      min-height: 200px
+      padding: 20px
+      position: relative
+      -webkit-animation: slideIn
+      -moz-animation: slideIn
+      -o-animation: slideIn
+      animation: slideIn
+      -webkit-animation-duration: 2s
+      -moz-animation-duration: 2s
+      -o-animation-duration: 2s
+      animation-duration: 2s
+      p
+        line-height: 1.3em
+        margin: 15px 0 20px
+
+
+  // Control Nav 750px and above
+  .control-container
+    width: 100%
+    max-width: 1600px
+    bottom: 30px
+
+  .control-nav
+    width: 100%
+    max-width: 1200px
+    
+
+  .flex-control-nav
+    width: 85px
+    margin: 0
+    margin-right: 11px
+    z-index: 200
+    float: right
+    li
+      margin: 0 6px
+      display: inline-block
+      zoom: 1
+      *display: inline
+
+  .flex-control-paging
+    li
+      a
+        width: 15px
+        height: 15px
+        display: block
+        background: $white
+        cursor: pointer
+        text-indent: -9999px
+        -webkit-border-radius: 20px
+        -moz-border-radius: 20px
+        -o-border-radius: 20px
+        border-radius: 20px
+      a:hover
+        background: $orange
+      a.flex-active
+        background: $orange
+        cursor: pointer
+
+  .flex-control-thumbs
+    margin: 5px 0 0
+    position: static
+    overflow: hidden
+    li
+      width: 25%
+      float: left
+      margin: 0
+    img
+      width: 100%
+      display: block
+      opacity: 0.7
+      cursor: pointer
+    img:hover
+      opacity: 1
+    .flex-active
+      opacity: 1
+      cursor: default
+
+@media screen and (min-width: 1170px)
+  .caption-container
+    padding-left: 10px
+
+@media screen and (min-width: 1180px)
+  .caption-container
+    padding-left: 0
+
+@-webkit-keyframes slideIn
+  0%
+    left: 9%
+    opacity: 0
+  100%
+    left: 0
+    opacity: 1
+
+@-moz-keyframes slideIn
+  0%
+    left: 9%
+    opacity: 0
+  100%
+    left: 0
+    opacity: 1
+
+@-o-keyframes slideIn
+  0%
+    left: 9%
+    opacity: 0
+  100%
+    left: 0
+    opacity: 1
+
+@keyframes slideIn
+  0%
+    left: 9%
+    opacity: 0
+  100%
+    left: 0
+    opacity: 1
